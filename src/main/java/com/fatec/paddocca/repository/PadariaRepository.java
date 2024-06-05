@@ -1,4 +1,4 @@
-package com.fatec.paddocca.model.repository;
+package com.fatec.paddocca.repository;
 
 import java.util.Optional;
 
@@ -7,11 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.fatec.paddocca.model.entity.Padaria;
 
-@Repository
 public interface PadariaRepository extends JpaRepository<Padaria, Long> {
-	
 	boolean existsByEmail(String email);
-	
 	Optional<Padaria> findByEmail(String email);
-	
 }

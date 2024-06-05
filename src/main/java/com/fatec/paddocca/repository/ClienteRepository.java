@@ -1,4 +1,4 @@
-package com.fatec.paddocca.model.repository;
+package com.fatec.paddocca.repository;
 
 import java.util.Optional;
 

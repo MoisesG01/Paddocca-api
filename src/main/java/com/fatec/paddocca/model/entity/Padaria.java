@@ -12,7 +12,6 @@ import lombok.experimental.SuperBuilder;
 import java.util.List;
 
 @Entity
-@Table(name = "padaria")
 @Data
 @SuperBuilder
 @NoArgsConstructor
