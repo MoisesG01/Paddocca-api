@@ -1,4 +1,6 @@
-package com.fatec.paddocca.api.dto;
+package com.fatec.paddocca.model.dto;
+
+import com.fatec.paddocca.model.enums.TipoPerfil;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,9 +13,10 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PadariaDTO extends UsuarioDTO {
+public class UsuarioDTO {
 	
-    private String cnpj;
-    private String endereco;
-    private String telefone;
+    private String email;
+    private String nome;
+    private String senha;
+    private TipoPerfil tipoPerfil;
 }

@@ -1,4 +1,4 @@
-package com.fatec.paddocca.api.dto;
+package com.fatec.paddocca.model.dto;
 
 import java.sql.Date;
 
