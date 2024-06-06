@@ -2,46 +2,39 @@ package com.fatec.paddocca.service;
 
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.fatec.paddocca.exception.ErroAutenticacao;
 import com.fatec.paddocca.exception.RegraNegocioException;
 import com.fatec.paddocca.model.entity.Usuario;
-import com.fatec.paddocca.model.repository.UsuarioRepository;
+import com.fatec.paddocca.repository.UsuarioRepository;
 
 import jakarta.transaction.Transactional;
 
 @Service
 public class UsuarioService {
-	
-	private final UsuarioRepository repository;
-	
-	public UsuarioService(UsuarioRepository repository) {
-		this.repository = repository;
-	}
+
+	@Autowired
+	private UsuarioRepository repository;
 
 
 	public Usuario autenticar(String email, String senha) {
-		Optional<Usuario> usuario = repository.findByEmail(email);
-		
-		if(!usuario.isPresent()) {
-			throw new ErroAutenticacao("Usuário Não Encontrado para o Email Informado!");
+		Usuario usuario = repository.findByEmail(email).orElseThrow(
+			()-> new ErroAutenticacao("Usuário ou senha incorreta")
+		);
+
+		if(!usuario.getSenha().equals(senha)) {
+			throw new ErroAutenticacao("Usuário ou senha incorreta");
 		}
 		
-		if(!usuario.get().getSenha().equals(senha)) {
-			throw new ErroAutenticacao("Senha Inválida!");
-		}
-		
-		return usuario.get();
+		return usuario;
 	}
 
-
-	@Transactional
 	public Usuario salvarUsuario(Usuario usuario) {
 	    validarEmail(usuario.getEmail());
 	    return repository.save(usuario);
 	}
-
 
 	public void validarEmail(String email) {
 		boolean existe = repository.existsByEmail(email);

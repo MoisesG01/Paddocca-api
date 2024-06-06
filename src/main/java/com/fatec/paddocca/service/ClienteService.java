@@ -7,12 +7,16 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class ClientService {
+public class ClienteService {
 
     @Autowired
     private ClienteRepository repository;
 
     public Cliente save (Cliente client) {
         return repository.save(client);
+    }
+
+    public boolean existsByEmail (String email) {
+        return repository.existsByEmail(email);
     }
 }

@@ -1,4 +1,4 @@
-package com.fatec.paddocca.model.repository;
+package com.fatec.paddocca.repository;
 
 import java.util.Optional;
 
@@ -13,5 +13,5 @@ public interface EntregadorRepository extends JpaRepository<Entregador, Long> {
 	boolean existsByEmail(String email);
 	
 	Optional<Entregador> findByEmail(String email);
-	
+
 }

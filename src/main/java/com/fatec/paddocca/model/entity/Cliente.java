@@ -11,21 +11,14 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 @Entity
-@Table(name = "cliente")
 @Data
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Cliente extends Usuario {
-    @Column(name = "cpf")
+
     private String cpf;
-
-    @Column(name = "data_nascimento")
     private Date dataNascimento;
-
-    @Column(name = "endereco")
     private String endereco;
-
-    @Column(name = "telefone")
     private String telefone;
 }

@@ -1,4 +1,4 @@
-package com.fatec.paddocca.model.dto;
+package com.fatec.paddocca.dto;
 
 import java.sql.Date;
 
@@ -13,10 +13,8 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ClienteDTO extends UsuarioDTO {
-	
+public class EntregadorDTO extends UsuarioDTO {
     private String cpf;
     private Date dataNascimento;
-    private String endereco;
     private String telefone;
 }

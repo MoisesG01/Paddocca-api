@@ -9,9 +9,5 @@ import com.fatec.paddocca.model.entity.Cliente;
 
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
-	
 	boolean existsByEmail(String email);
-	
-	Optional<Cliente> findByEmail(String email);
-	
 }

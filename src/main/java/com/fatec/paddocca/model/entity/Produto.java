@@ -1,6 +1,6 @@
 package com.fatec.paddocca.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -16,10 +16,9 @@ public class Produto {
     private String descricao;
     private String categoria;
     private double preco;
-    private long padariaId;
 
     @ManyToOne
-    @JoinColumn(name = "padariaId", insertable = false, updatable = false)
-    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Padaria padaria;
 }
+

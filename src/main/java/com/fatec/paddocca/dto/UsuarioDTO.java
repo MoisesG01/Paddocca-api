@@ -1,4 +1,4 @@
-package com.fatec.paddocca.model.dto;
+package com.fatec.paddocca.dto;
 
 import com.fatec.paddocca.model.enums.TipoPerfil;
 
