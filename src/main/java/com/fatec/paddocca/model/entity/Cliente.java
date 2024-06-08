@@ -10,11 +10,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-@Entity
 @Data
-@SuperBuilder
-@NoArgsConstructor
-@AllArgsConstructor
+@Entity
 public class Cliente extends Usuario {
 
     private String cpf;
