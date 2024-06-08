@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import com.fatec.paddocca.model.entity.Padaria;
 
+@Repository
 public interface PadariaRepository extends JpaRepository<Padaria, Long>, EmailRepository {
-	Optional<Padaria> findByEmail(String email);
 }

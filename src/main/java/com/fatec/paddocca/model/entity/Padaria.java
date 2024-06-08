@@ -1,16 +1,10 @@
 package com.fatec.paddocca.model.entity;
 
 import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
 
-@Entity
 @Data
-@SuperBuilder
-@NoArgsConstructor
-@AllArgsConstructor
+@Entity
 public class Padaria extends Usuario {
 
     private String cnpj;

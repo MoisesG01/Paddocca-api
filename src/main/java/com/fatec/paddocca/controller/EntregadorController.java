@@ -15,7 +15,5 @@ public class EntregadorController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Entregador salvarEntregador(@RequestBody Entregador entregador) {
-        return service.save(entregador);
-    }
+    public Entregador salvarEntregador(@RequestBody Entregador entregador) { return service.save(entregador); }
 }

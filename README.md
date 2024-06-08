@@ -1,0 +1,2 @@
+- Encriptar senha
+- Paginação

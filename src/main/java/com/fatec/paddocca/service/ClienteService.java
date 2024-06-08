@@ -2,21 +2,30 @@ package com.fatec.paddocca.service;
 
 import com.fatec.paddocca.model.entity.Cliente;
 import com.fatec.paddocca.repository.ClienteRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.fatec.paddocca.security.PasswordEncoder;
+import com.fatec.paddocca.validation.EmailValidation;
 import org.springframework.stereotype.Service;
 
 
 @Service
 public class ClienteService {
 
-    @Autowired
-    private ClienteRepository repository;
+    private final ClienteRepository repository;
+    private final EmailValidation validation;
+    private final PasswordEncoder passwordEncoder;
 
-    public Cliente save (Cliente client) {
-        return repository.save(client);
+    public ClienteService(ClienteRepository repository) {
+        this.repository = repository;
+        this.validation = new EmailValidation(repository);
+        this.passwordEncoder = new PasswordEncoder();
     }
 
-    public boolean existsByEmail (String email) {
-        return repository.existsByEmail(email);
+    public Cliente save (Cliente cliente) {
+        validation.existsByEmail(cliente.getEmail());
+
+        String passwordEncoded = passwordEncoder.encode(cliente.getSenha());
+        cliente.setSenha(passwordEncoded);
+
+        return repository.save(cliente);
     }
 }
