@@ -1,6 +1,6 @@
 # Sistema de Delivery de Padaria - Backend
 
-Este é o backend do sistema de delivery de padaria PAddocca, desenvolvido com Spring Boot. Ele é responsável por gerenciar a lógica de negócios, comunicação com o banco de dados e a exposição de endpoints REST para a aplicação frontend.
+Este é o backend do sistema de delivery de padaria Paddocca, desenvolvido com Spring Boot. Ele é responsável por gerenciar a lógica de negócios, comunicação com o banco de dados e a exposição de endpoints REST para a aplicação frontend.
 
 ## Funcionalidades
 
