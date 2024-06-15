@@ -39,8 +39,8 @@ Este é o backend do sistema de delivery de padaria PAddocca, desenvolvido com S
 1. **Clone o repositório**
 
    ```bash
-   git clone <https://github.com/MoisesG01/Paddocca-api.git>
-   cd <NOME_DO_REPOSITORIO>
+   git clone https://github.com/MoisesG01/Paddocca-api.git
+   cd Paddocca
 
 2. **Compile e execute a aplicação**
 
