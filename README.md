@@ -24,7 +24,7 @@ Este é o backend do sistema de delivery de padaria Paddocca, desenvolvido com S
 
 - **src/main/java/com/fatec/paddocca**: Contém os arquivos de código fonte
   - **controller**: Controladores REST
-  - **model**: Modelos de entidade e repositórios
+  - **model**: Modelos de entidade
   - **repository**: Repositórios
   - **service**: Serviços de negócios
 - **src/main/resources**: Arquivos de configuração e recursos estáticos
