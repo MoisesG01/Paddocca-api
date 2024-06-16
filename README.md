@@ -40,13 +40,10 @@ Este é o backend do sistema de delivery de padaria Paddocca, desenvolvido com S
 
    ```bash
    git clone https://github.com/MoisesG01/Paddocca-api.git
-   cd Paddocca
 
-2. **Compile e execute a aplicação**
-
-      ```bash
-   mvn clean install
-   mvn spring-boot:run
+2. **Importe a aplicação para a sua IDE**
+- Importe como um projeto Maven existente
+- Execute a aplicação
 
 3. **Acesse a aplicação**
 - A aplicação estará disponível em http://localhost:8080
